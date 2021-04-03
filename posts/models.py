@@ -4,12 +4,12 @@ from django.utils.translation import gettext as _
 
 class Post(models.Model):
     title = models.TextField(
-        verbose_name=_('News title'),
+        verbose_name=_('Title'),
         help_text=_('Write the title of the news item here'),
         max_length=32
     )
     text = models.TextField(
-        verbose_name=_('News text'),
+        verbose_name=_('Text'),
         help_text=_('Write the title of the news item here'),
         max_length=256
     )
