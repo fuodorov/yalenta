@@ -3,12 +3,12 @@
 {% block header %} Error 500 {% endblock %}
 
 {% block content %}
-<main role="main" class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <p class="lead">Server error, try refreshing the page or contact later</p>
-      <p class="lead"><a href="{% url 'index' %}">Back to home</a></p>
-    </div>
-  </div>
-</main>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead">Server error, try refreshing the page or contact later</p>
+                <p class="lead"><a href="{% url 'index' %}">Back to home</a></p>
+            </div>
+        </div>
+    </main>
 {% endblock %}

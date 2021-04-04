@@ -18,3 +18,15 @@ The completed ToR must be compiled into a .gzip, .bzip2, or .zip archive and inc
 - Instructions for assembly (if the project is assembled in parts) as well as instructions for use in English.
 - Where appropriate, additional files with database structure, application configuration, etc.
 Solutions that do not meet the requirements will not be considered.
+
+## ToDo
+
+- [x] app posts
+- [x] app about
+- [x] static and templates
+- [x] tests
+- [x] api
+- [x] doc
+- [x] docker
+
+

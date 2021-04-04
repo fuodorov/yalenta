@@ -1,23 +1,23 @@
 <style>
-  nav {
-    background-color: #fff;
-  }
+    nav {
+        background-color: #fff;
+    }
 
-  a {
-    text-decoration: none;
-    color: #000;
-  }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
 
-  a:hover {
-    text-decoration: none;
-    color: red;
-    transition: 0.5s;
-  }
+    a:hover {
+        text-decoration: none;
+        color: red;
+        transition: 0.5s;
+    }
 </style>
 
 <nav class="navbar navbar-light">
-  <a class="navbar-brand" href="{% url 'index' %}"><span style="color:red">Ya</span>lenta</a>
-  <nav class="my-2 my-md-0 mr-md-3">
-      <a href="{% url 'new_post' %}">Create</a>
-  </nav>
+    <a class="navbar-brand" href="{% url 'index' %}"><span style="color:red">Ya</span>lenta</a>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a href="{% url 'new_post' %}">Create</a>
+    </nav>
 </nav>

@@ -1,5 +1,6 @@
 {% extends "include/base.html" %}
 {% block title %}About technology{% endblock %}
+{% block header %}About technology{% endblock %}
 {% block content %}
 <main role="main" class="container">
     <div class="row">
@@ -9,10 +10,12 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <div class="h3">
+                                Python
                             </div>
                         </li>
                         <li class="list-group-item">
                             <div class="h6 text-muted">
+                                Django
                             </div>
                         </li>
                     </ul>
@@ -22,7 +25,11 @@
         <div class="col-md-9">
             <div class="card-body">
                 <div class="card-text">
-                    <p></p>
+                    <p>
+                        This newsfeed is written using Django framework, bootstrap templates and SQlite database.
+                        Django Rest was used to write the api.
+                        Docker was used to containerize the application.
+                    </p>
                 </div>
             </div>
         </div>
