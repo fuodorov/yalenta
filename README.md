@@ -24,6 +24,7 @@ Solutions that do not meet the requirements will not be considered.
 - [x] app posts
 - [x] app about
 - [x] static and templates
+- [x] paginator
 - [x] tests
 - [x] api
 - [x] doc
