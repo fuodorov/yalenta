@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from .settings import POSTS_PER_PAGE_CHOICES
+from .singleton_model import SingletonModel
+
 
 class Post(models.Model):
     title = models.CharField(
@@ -32,3 +35,17 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class SiteSettings(SingletonModel):
+    posts_per_page = models.CharField(
+        verbose_name=_('The number of news on the page'),
+        help_text=_('Select the number of news on the page'),
+        choices=POSTS_PER_PAGE_CHOICES,
+        default=POSTS_PER_PAGE_CHOICES[0][0],
+        max_length=2
+    )
+
+    class Meta:
+        verbose_name = _('Settings')
+        verbose_name_plural = _('Settings')
