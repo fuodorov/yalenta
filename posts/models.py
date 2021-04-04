@@ -1,17 +1,16 @@
 from django.db import models
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 
 class Post(models.Model):
-    title = models.TextField(
+    title = models.CharField(
         verbose_name=_('Title'),
         help_text=_('Write the title of the news item here'),
-        max_length=32
+        max_length=255
     )
     text = models.TextField(
         verbose_name=_('Text'),
-        help_text=_('Write the title of the news item here'),
-        max_length=256
+        help_text=_('Write the title of the news item here')
     )
     pub_date = models.DateTimeField(
         verbose_name=_('Date of publication'),
