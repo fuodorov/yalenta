@@ -6,7 +6,7 @@ from posts.models import Post, SiteSettings
 class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('title', 'text', 'image', 'pub_date')
+        fields = '__all__'
         model = Post
 
 
