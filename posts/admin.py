@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.contrib.admin import register
-from django.db.utils import ProgrammingError
 from django.utils.translation import gettext as _
 
 from .models import Post, SiteSettings

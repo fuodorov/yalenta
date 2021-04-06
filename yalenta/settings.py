@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'posts',
     'api',
     'about',
+    'docs',
     'sorl.thumbnail',
     'debug_toolbar',
     'rest_framework',

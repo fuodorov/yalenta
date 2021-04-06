@@ -6,6 +6,7 @@ from .singleton_model import SingletonModel
 
 
 class Post(models.Model):
+    """Model for news posts."""
     title = models.CharField(
         verbose_name=_('Title'),
         help_text=_('Write the title of the news item here'),
@@ -38,6 +39,12 @@ class Post(models.Model):
 
 
 class SiteSettings(SingletonModel):
+    """Model for dynamic site customisation.
+
+    Dynamic site settings that will be available to the user.
+    For example, the name of the site, some specialised information,
+    and you take into account the possibility of multilingualism.
+    """
     posts_per_page = models.CharField(
         verbose_name=_('The number of news on the page'),
         help_text=_('Select the number of news on the page'),
