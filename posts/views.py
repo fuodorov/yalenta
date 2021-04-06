@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import redirect, render
 from rest_framework import status
 
 from .forms import PostForm, SiteSettingsForm
@@ -8,8 +8,10 @@ from .models import Post, SiteSettings
 
 def index(request):
     """View home page function."""
-    per_page = get_object_or_404(SiteSettings).posts_per_page
-    paginator = Paginator(Post.objects.all(), int(per_page))
+    paginator = Paginator(
+        Post.objects.all(),
+        int(SiteSettings.load().posts_per_page)
+    )
     return render(request, 'index.html', {
         'page': paginator.get_page(request.GET.get('page')),
         'paginator': paginator
