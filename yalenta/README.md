@@ -1,4 +1,4 @@
-# Test assignment for a Python Developer candidate at [Sibers](http://www.sibers.com)
+# Test assignment for a Python Developer candidate
 
 ## Deployment Yalenta
 
