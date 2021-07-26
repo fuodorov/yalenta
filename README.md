@@ -1,5 +1,27 @@
 # Test assignment for a Python Developer candidate
 
+
+## ToDo
+
+- [x] app posts
+- [x] app about
+- [x] static and templates
+- [x] paginator
+- [x] tests
+- [x] api
+- [x] doc
+- [x] docker
+- [x] docker compose
+- [x] add comments
+- [x] liquibase
+- [x] oauth with access token
+- [x] refresh token
+- [x] React FE
+- [x] Activate email
+- [x] Reset password email 
+- [x] Celery + Redis + RabbitMQ  
+
+
 ## Deployment Yalenta
 ### Build the image
 A Docker image is a private file system just for your container. It provides all the files and code your container needs.
@@ -33,25 +55,5 @@ The completed ToR must be compiled into a .gzip, .bzip2, or .zip archive and inc
 - Instructions for assembly (if the project is assembled in parts) as well as instructions for use in English.
 - Where appropriate, additional files with database structure, application configuration, etc.
 Solutions that do not meet the requirements will not be considered.
-
-## ToDo
-
-- [x] app posts
-- [x] app about
-- [x] static and templates
-- [x] paginator
-- [x] tests
-- [x] api
-- [x] doc
-- [x] docker
-- [x] docker compose
-- [x] add comments
-- [x] liquibase
-- [x] oauth with access token
-- [x] refresh token
-- [x] React FE
-- [x] Activate email
-- [x] Reset password email 
-- [x] Celery + Redis + RabbitMQ  
 
 
