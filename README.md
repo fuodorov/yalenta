@@ -1,4 +1,4 @@
-# Test assignment for a Python Developer candidate at [Sibers](http://www.sibers.com)
+# Test assignment for a Python Developer candidate
 
 ## Deployment Yalenta
 ### Build the image
@@ -44,5 +44,13 @@ Solutions that do not meet the requirements will not be considered.
 - [x] api
 - [x] doc
 - [x] docker
+- [x] docker compose
+- [x] add comments 
+- [x] oauth with access token
+- [x] refresh token
+- [x] React FE
+- [x] Activate email
+- [x] Reset password email 
+- [x] Celery + Redis + RabbitMQ  
 
 
