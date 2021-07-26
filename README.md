@@ -45,7 +45,8 @@ Solutions that do not meet the requirements will not be considered.
 - [x] doc
 - [x] docker
 - [x] docker compose
-- [x] add comments 
+- [x] add comments
+- [x] liquibase
 - [x] oauth with access token
 - [x] refresh token
 - [x] React FE
