@@ -1,0 +1,430 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="fedorov (generated)" id="1620189069136-1">
+        <createTable tableName="auth_group">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auth_group_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-2">
+        <createTable tableName="auth_group_permissions">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auth_group_permissions_pkey"/>
+            </column>
+            <column name="group_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="permission_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-3">
+        <createTable tableName="auth_permission">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auth_permission_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content_type_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="codename" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-4">
+        <createTable tableName="django_content_type">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_content_type_pkey"/>
+            </column>
+            <column name="app_label" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="model" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-5">
+        <createTable tableName="auth_user_groups">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auth_user_groups_pkey"/>
+            </column>
+            <column name="user_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="group_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-6">
+        <createTable tableName="auth_user">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auth_user_pkey"/>
+            </column>
+            <column name="password" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_login" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="is_superuser" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(254)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_staff" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date_joined" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-7">
+        <createTable tableName="auth_user_user_permissions">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="auth_user_user_permissions_pkey"/>
+            </column>
+            <column name="user_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="permission_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-8">
+        <createTable tableName="django_admin_log">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_admin_log_pkey"/>
+            </column>
+            <column name="action_time" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="object_id" type="TEXT"/>
+            <column name="object_repr" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="action_flag" type="SMALLINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="change_message" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content_type_id" type="INTEGER"/>
+            <column name="user_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-9">
+        <createTable tableName="django_flatpage">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_flatpage_pkey"/>
+            </column>
+            <column name="url" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="content" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="enable_comments" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="template_name" type="VARCHAR(70)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="registration_required" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-10">
+        <createTable tableName="django_flatpage_sites">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_flatpage_sites_pkey"/>
+            </column>
+            <column name="flatpage_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="site_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-11">
+        <createTable tableName="django_site">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_site_pkey"/>
+            </column>
+            <column name="domain" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-12">
+        <createTable tableName="django_migrations">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_migrations_pkey"/>
+            </column>
+            <column name="app" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="applied" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-13">
+        <createTable tableName="django_session">
+            <column name="session_key" type="VARCHAR(40)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="django_session_pkey"/>
+            </column>
+            <column name="session_data" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="expire_date" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-14">
+        <createTable tableName="posts_comment">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="posts_comment_pkey"/>
+            </column>
+            <column name="text" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="post_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-15">
+        <createTable tableName="posts_post">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="posts_post_pkey"/>
+            </column>
+            <column name="title" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="text" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="pub_date" type="TIMESTAMP WITH TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="image" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-16">
+        <createTable tableName="posts_sitesettings">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="posts_sitesettings_pkey"/>
+            </column>
+            <column name="posts_per_page" type="VARCHAR(2)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-17">
+        <createTable tableName="thumbnail_kvstore">
+            <column name="key" type="VARCHAR(200)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="thumbnail_kvstore_pkey"/>
+            </column>
+            <column name="value" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-18">
+        <createIndex indexName="auth_group_name_key" tableName="auth_group" unique="true">
+            <column name="name"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-19">
+        <addForeignKeyConstraint baseColumnNames="group_id" baseTableName="auth_user_groups" constraintName="auth_user_groups_group_id_97559544_fk_auth_group_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_group" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-20">
+        <createIndex indexName="auth_group_permissions_group_id_b120cbf9" tableName="auth_group_permissions">
+            <column name="group_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-21">
+        <addForeignKeyConstraint baseColumnNames="group_id" baseTableName="auth_group_permissions" constraintName="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_group" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-22">
+        <createIndex indexName="auth_group_permissions_group_id_permission_id_0cd325b0_uniq" tableName="auth_group_permissions" unique="true">
+            <column name="group_id"/>
+            <column name="permission_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-23">
+        <createIndex indexName="auth_group_permissions_permission_id_84c5c92e" tableName="auth_group_permissions">
+            <column name="permission_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-24">
+        <createIndex indexName="auth_permission_content_type_id_2f476e4b" tableName="auth_permission">
+            <column name="content_type_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-25">
+        <createIndex indexName="auth_permission_content_type_id_codename_01ab375a_uniq" tableName="auth_permission" unique="true">
+            <column name="content_type_id"/>
+            <column name="codename"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-26">
+        <addForeignKeyConstraint baseColumnNames="permission_id" baseTableName="auth_user_user_permissions" constraintName="auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_permission" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-27">
+        <createIndex indexName="django_content_type_app_label_model_76bd3d3b_uniq" tableName="django_content_type" unique="true">
+            <column name="app_label"/>
+            <column name="model"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-28">
+        <createIndex indexName="auth_user_groups_group_id_97559544" tableName="auth_user_groups">
+            <column name="group_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-29">
+        <createIndex indexName="auth_user_groups_user_id_6a12ed8b" tableName="auth_user_groups">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-30">
+        <createIndex indexName="auth_user_groups_user_id_group_id_94350c0c_uniq" tableName="auth_user_groups" unique="true">
+            <column name="user_id"/>
+            <column name="group_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-31">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="auth_user_user_permissions" constraintName="auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_user" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-32">
+        <createIndex indexName="auth_user_username_key" tableName="auth_user" unique="true">
+            <column name="username"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-33">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="django_admin_log" constraintName="django_admin_log_user_id_c564eba6_fk_auth_user_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_user" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-34">
+        <createIndex indexName="auth_user_user_permissions_permission_id_1fbb5f2c" tableName="auth_user_user_permissions">
+            <column name="permission_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-35">
+        <createIndex indexName="auth_user_user_permissions_user_id_a95ead1b" tableName="auth_user_user_permissions">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-36">
+        <createIndex indexName="auth_user_user_permissions_user_id_permission_id_14a6b632_uniq" tableName="auth_user_user_permissions" unique="true">
+            <column name="user_id"/>
+            <column name="permission_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-37">
+        <createIndex indexName="django_admin_log_content_type_id_c4bce8eb" tableName="django_admin_log">
+            <column name="content_type_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-38">
+        <addForeignKeyConstraint baseColumnNames="content_type_id" baseTableName="django_admin_log" constraintName="django_admin_log_content_type_id_c4bce8eb_fk_django_co" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="django_content_type" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-39">
+        <createIndex indexName="django_admin_log_user_id_c564eba6" tableName="django_admin_log">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-40">
+        <addForeignKeyConstraint baseColumnNames="flatpage_id" baseTableName="django_flatpage_sites" constraintName="django_flatpage_site_flatpage_id_078bbc8b_fk_django_fl" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="django_flatpage" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-41">
+        <createIndex indexName="django_flatpage_url_41612362" tableName="django_flatpage">
+            <column name="url"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-42">
+        <createIndex indexName="django_flatpage_sites_flatpage_id_078bbc8b" tableName="django_flatpage_sites">
+            <column name="flatpage_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-43">
+        <createIndex indexName="django_flatpage_sites_flatpage_id_site_id_0d29d9d1_uniq" tableName="django_flatpage_sites" unique="true">
+            <column name="flatpage_id"/>
+            <column name="site_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-44">
+        <createIndex indexName="django_flatpage_sites_site_id_bfd8ea84" tableName="django_flatpage_sites">
+            <column name="site_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-45">
+        <createIndex indexName="django_site_domain_a2e37b91_like" tableName="django_site">
+            <column name="domain"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-46">
+        <createIndex indexName="django_session_expire_date_a5c62663" tableName="django_session">
+            <column name="expire_date"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-47">
+        <createIndex indexName="posts_comment_post_id_e81436d7" tableName="posts_comment">
+            <column name="post_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-48">
+        <addForeignKeyConstraint baseColumnNames="permission_id" baseTableName="auth_group_permissions" constraintName="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_permission" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-49">
+        <addForeignKeyConstraint baseColumnNames="content_type_id" baseTableName="auth_permission" constraintName="auth_permission_content_type_id_2f476e4b_fk_django_co" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="django_content_type" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-50">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="auth_user_groups" constraintName="auth_user_groups_user_id_6a12ed8b_fk_auth_user_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auth_user" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-51">
+        <addForeignKeyConstraint baseColumnNames="site_id" baseTableName="django_flatpage_sites" constraintName="django_flatpage_sites_site_id_bfd8ea84_fk_django_site_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="django_site" validate="true"/>
+    </changeSet>
+    <changeSet author="fedorov (generated)" id="1620189069136-52">
+        <addForeignKeyConstraint baseColumnNames="post_id" baseTableName="posts_comment" constraintName="posts_comment_post_id_e81436d7_fk_posts_post_id" deferrable="true" initiallyDeferred="true" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="posts_post" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
